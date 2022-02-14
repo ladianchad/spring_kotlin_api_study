@@ -12,10 +12,10 @@ API
     - return all device list
   - POST /v1/devices
     - create new device
-  - GET /v1/device/{deviceId}
+  - GET /v1/devices/{deviceId}
     - get device info
-  - PATCH /v1/device/{deviceID}/value
+  - PATCH /v1/devices/{deviceID}/value
     - update device value
-  - PATCH /v1/device/{deviceID}/command
+  - PATCH /v1/devices/{deviceID}/command
     - update command
   
