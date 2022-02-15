@@ -29,14 +29,16 @@ val snippetsDir by extra { file("build/generated-snippets") }
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-mustache")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-	implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
-	developmentOnly("org.springframework.boot:spring-boot-devtools")
+//	implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+//	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("com.h2database:h2")
+	runtimeOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
+//	testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
 }
 allOpen {
 	annotation("javax.persistence.Entity")

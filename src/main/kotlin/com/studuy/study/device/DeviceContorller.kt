@@ -8,10 +8,9 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping(produces = [MediaType.APPLICATION_JSON_VALUE])
 class DeviceContorller(
-//    private val deviceService: DeviceService
 ){
     @GetMapping("/v1/devices")
     fun getDevices(): String{
-        return "HelloWorld";
+        return "HelloWorld"
     }
 }
