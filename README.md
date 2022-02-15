@@ -1,18 +1,20 @@
 ### Spring + Kotlin API Server Study
 
-Entity
+###Entity
 - Device
   - id
   - value (sensor value)
   - command
 
-Service
+
+###Service
 - get
 - get list
 - update value
 - update command
 
-API (Controller)
+
+###API (Controller)
 - Device
   - GET /v1/devices
     - return all device list
