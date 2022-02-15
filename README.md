@@ -6,7 +6,13 @@ Entity
   - value (sensor value)
   - command
 
-API
+Service
+- get
+- get list
+- update value
+- update command
+
+API (Controller)
 - Device
   - GET /v1/devices
     - return all device list
