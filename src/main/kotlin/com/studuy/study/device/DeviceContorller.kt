@@ -28,7 +28,7 @@ class DeviceContorller(
         return deviceService.createDevice()
     }
 
-    @Operation(summary = "Device 정보를 주는 API")
+    @Operation(summary = "Device data를 주는 API")
     @GetMapping("/v1/devices/{deviceId}")
     fun getDevice(@PathVariable("deviceId") deviceId: Long): Device {
         return deviceService.getDevice(deviceId)
