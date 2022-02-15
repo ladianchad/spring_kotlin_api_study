@@ -14,8 +14,8 @@ API
     - create new device
   - GET /v1/devices/{deviceId}
     - get device info
-  - PATCH /v1/devices/{deviceID}/value
+  - PATCH /v1/devices/{deviceId}/value
     - update device value
-  - PATCH /v1/devices/{deviceID}/command
+  - PATCH /v1/devices/{deviceId}/command
     - update command
   
