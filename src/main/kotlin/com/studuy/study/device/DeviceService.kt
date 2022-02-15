@@ -20,19 +20,19 @@ class DeviceService(
     }
 
     fun getDevice(deviceId: Long): Device{
-        return deviceRepository.findByIdOrNull(deviceId) ?: throw RuntimeException("no device!!")
+        return deviceRepository.findById(deviceId).orElseThrow()
     }
 
     @Transactional
     fun updateDeviceValue(deviceId: Long, value: String): Device{
-        val device = deviceRepository.findByIdOrNull(deviceId) ?: throw RuntimeException("no device!!")
+        val device = deviceRepository.findById(deviceId).orElseThrow()
         device.value = value
         return  deviceRepository.save(device)
     }
 
     @Transactional
     fun updateDeviceCommand(deviceId: Long, command: String): Device{
-        val device = deviceRepository.findByIdOrNull(deviceId) ?: throw RuntimeException("no device!!")
+        val device = deviceRepository.findById(deviceId).orElseThrow()
         device.command = command
         return deviceRepository.save(device)
     }
