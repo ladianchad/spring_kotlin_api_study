@@ -1,5 +1,6 @@
 springdoc:
   swagger-ui:
     path: /api
-
+server:
+  port: 5000
 

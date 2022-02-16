@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping(produces = [MediaType.APPLICATION_JSON_VALUE])
-class DeviceContorller(
+class DeviceAPIContorller(
     private val deviceService: DeviceService
 ) {
     @Operation(summary = "Device list를 주는 API")
