@@ -12,6 +12,6 @@ class IndexController {
         model["title"] = "Spring Kotlin APi"
         model["comment"] = "Spring Kotlin API를 공부하기 위한 사이트 입니다."
         model["entity"] = "Device"
-        return "redirect:http://study-ui.lachani.com"
+        return "redirect:https://study-ui.lachani.com"
     }
 }
