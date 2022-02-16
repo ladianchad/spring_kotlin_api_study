@@ -1,0 +1,12 @@
+{{> header}}
+<h1>Device list</h1>
+{{#devices}}
+<div style="height: auto; margin-top: 30px; margin-bottom: 30px;">
+    <p>id : {{id}}</p>
+    <p>value : {{value}}</p>
+    <p>command : {{command}}</p>
+    <a href={{url}} role="button">go to device {{id}}</a>
+</div>
+{{/devices}}
+
+{{> footer}}
