@@ -10,10 +10,17 @@ class DeviceController(
     private val deviceService: DeviceService
 ) {
     @GetMapping("/devices")
-    fun getDeviceList(model: Model): String{
+    fun getDeviceList(model: Model): String {
         val devices = deviceService.getAllDevice()
+        val devicesDto =  devices.map { device: Device ->
+            mapOf(
+                "id" to device.id!!,
+                "value" to (device.value ?: "null"),
+                "command" to (device.command ?: "null")
+            )
+        }
         model["title"] = "Spring Kotlin APi"
-        model["devices"] = listOf("test","test1")
+        model["devices"] = devicesDto
         return "device/device"
     }
 }
