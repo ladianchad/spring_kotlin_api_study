@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping
 class IndexController {
     @GetMapping("/")
     fun home(model: Model): String {
-        return "redirect:https://device-ui.lachani.com"
+        return "home"
     }
 }
