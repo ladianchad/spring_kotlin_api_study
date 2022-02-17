@@ -49,5 +49,11 @@ jobs:
             deployment_package: ./build/libs/${{env.artifact}}
             wait_for_environment_recovery: 30
 
+        - name: Configure AWS Credentials
+          uses: aws-actions/configure-aws-credentials@v1
+          with:
+            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
         - name: Invalidate CloudFront Cache
           run: aws cloudfront create-invalidation --distribution-id ${{secrets.CLOUD_FRONT_ID}} --paths "/*"
