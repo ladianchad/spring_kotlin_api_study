@@ -50,4 +50,4 @@ jobs:
             wait_for_environment_recovery: 30
 
         - name: Invalidate CloudFront Cache
-            run: aws cloudfront create-invalidation --distribution-id ${{secrets.CLOUD_FRONT_ID}} --paths "/*"
+          run: aws cloudfront create-invalidation --distribution-id ${{secrets.CLOUD_FRONT_ID}} --paths "/*"
