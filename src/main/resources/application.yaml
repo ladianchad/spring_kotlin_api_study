@@ -1,4 +1,5 @@
 springdoc:
+  openapi: 3.0.1
   swagger-ui:
     path: /api
     urls :
