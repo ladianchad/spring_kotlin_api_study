@@ -1,7 +1,4 @@
 springdoc:
-  openapi: 3.0.1
   swagger-ui:
     path: /api
-    urls :
-      - name: main
-        url: https://study.lachani.com
+
